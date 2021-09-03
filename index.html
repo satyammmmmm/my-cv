@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Basic Header</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="assets/header-fixed.css">
+	<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+<header class="header-fixed">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">R<span>logistics</span></a></h1>
+
+		<nav>
+			<a href="#">Home</a>
+			<a href="#">Blog</a>
+			<a href="#">Pricing</a>
+			<a href="#">About</a>
+			<a href="#">Faq</a>
+			<a href="#">Contact</a>
+		</nav>
+
+	</div>
+
+</header>
+
+
+
+
+
+
+
+
+<h1>Image Slider</h1>
+    <div class="slide-container">
+       <div class="slide fade">
+        <img src='https://images.unsplash.com/photo-1590595978583-3967cf17d2ea?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
+      </div>
+      <div class="slide fade">
+        <img src='https://images.unsplash.com/photo-1588807308097-fb6e5047df8c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
+      </div>
+      <div class="slide fade">
+        <img src='https://images.unsplash.com/photo-1589808710416-24cf7ac026f2?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
+      </div>
+      <div class="slide fade">
+        <img src='https://images.unsplash.com/photo-1588796388882-a4d533c47e5e?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
+      </div>
+
+      <a href="#" class="prev" title="Previous">&#10094</a>
+      <a href="#" class="next" title="Next">&#10095</a>
+    </div>
+    <div class="dots-container">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+
+
+
+<script>
+
+var currentSlide = 0;
+const slides = document.querySelectorAll(".slide")
+const dots = document.querySelectorAll('.dot')
+
+const init = (n) => {
+  slides.forEach((slide) => {
+    slide.style.display = "none"
+    dots.forEach((dot) => {
+      dot.classList.remove("active")
+    })
+  })
+  slides[n].style.display = "block"
+  dots[n].classList.add("active")
+}
+document.addEventListener("DOMContentLoaded", init(currentSlide))
+	</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <!--<div class="w3-content w3-section" style="max-width:500px">
+	<img class="mySlides w3-animate-top" src="img/download.png" style="width:100%">
+	<img class="mySlides w3-animate-bottom" src="img/Screenshot (67).png" style="width:100%">
+	<img class="mySlides w3-animate-top" src="img/Screenshot (77).png" style="width:100%">
+	<img class="mySlides w3-animate-bottom" src="img/Screenshot (78).png" style="width:100%">
+  </div>
+  
+  <script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+	var i;
+	var x = document.getElementsByClassName("mySlides");
+	for (i = 0; i < x.length; i++) {
+	  x[i].style.display = "none";  
+	}
+	myIndex++;
+	if (myIndex > x.length) {myIndex = 1}    
+	x[myIndex-1].style.display = "block";  
+	setTimeout(carousel, 1000);    
+  }
+  </script> -->
+  
+
+<!-- You need this element to prevent the content of the page from jumping up --
+<div class="header-fixed-placeholder"></div>
+
+<!-- The content of your page would go here. -->
+
+
+
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+	$(document).ready(function(){
+
+		var showHeaderAt = 150;
+
+		var win = $(window),
+				body = $('body');
+
+		// Show the fixed header only on larger screen devices
+
+		if(win.width() > 400){
+
+			// When we scroll more than 150px down, we set the
+			// "fixed" class on the body element.
+
+			win.on('scroll', function(e){
+
+				if(win.scrollTop() > showHeaderAt) {
+					body.addClass('fixed');
+				}
+				else {
+					body.removeClass('fixed');
+				}
+			});
+
+		}
+
+	});
+
+</script>
+
+
+
+
+
+
+<!-- Demo ads. Please ignore and remove. -->
+<script src="http://cdn.tutorialzine.com/misc/enhance/v3.js" async></script>
+
+
+	<!----	<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>R<span>logistics</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">webdevtrick &copy; 2019</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>21 Revolution Street</span> Delhi, India</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 xxxxxxxxx</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">contact@webdevtrick.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+
+
+</body>
+
+</html>
